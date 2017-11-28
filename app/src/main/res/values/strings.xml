@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Final commuwize app</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="sign_up">Sign in</string>
+    <string name="google">SignIn with Gmail</string>
+    <string name="Facebook">SignIn with Facebook</string>
+    <string name="phone">SignIn with Phone</string>
+    <string name="create_account">Create account</string>
+    <string name="login">Login</string>
+    <string name="title_activity_main_fragment">MainFragment</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_fragment">Fragment Activity</string>
+    <string name="tab_text_1">Posts</string>
+    <string name="tab_text_2">Chat</string>
+    <string name="tab_text_3">Events</string>
+    <string name="tab_text_4">Groups</string>
+</resources>
