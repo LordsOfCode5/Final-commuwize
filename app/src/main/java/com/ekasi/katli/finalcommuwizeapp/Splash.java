@@ -2,15 +2,18 @@ package com.ekasi.katli.finalcommuwizeapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.TextView;
 
 public class Splash extends Activity {
 
     /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 6000;
+    private final int SPLASH_DISPLAY_LENGTH = 10000;
 
     /** Called when the activity is first created. */
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
