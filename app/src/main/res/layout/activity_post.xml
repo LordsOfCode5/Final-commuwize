@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="com.ekasi.katli.finalcommuwizeapp.PostActivity">
 
 
@@ -15,15 +16,26 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageButton
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload image"
+                android:background="@color/colorPrimary"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:onClick="btnBrowse_click"/>
+
+            <ImageView
                 android:id="@+id/imageVIew"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:scaleType="centerCrop"
-                android:background="@mipmap/ic_launcher"
-                android:onClick="btnBrowse_click"/>
+                android:visibility="gone"
+                android:background="@mipmap/ic_launcher"/>
+
 
         </LinearLayout>
 
@@ -45,15 +57,18 @@
                     android:paddingTop="7dp"
                     android:gravity="start"
                     android:layout_margin="10dp"
-                    android:background="@drawable/edit_border" />
+                    android:background="@drawable/edit_border"
+                    android:textColor="#4e4e4e"
+                    android:textColorHint="#b8baba"/>
 
 
                <Button
-                    android:id="@+id/submit"
                     android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Post"
+                   android:background="@color/colorPrimary"
+                   android:onClick="submitButtonClicked"
                     />
 
             </LinearLayout>

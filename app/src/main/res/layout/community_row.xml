@@ -3,24 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp">
+    android:layout_marginTop="10dp"
+    android:background="#ffffff">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#ffffff">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImage"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/social_viber"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mi_pic"
             android:layout_margin="8dp"/>
 
         <LinearLayout
@@ -35,7 +37,8 @@
             android:text="Katlego molokomme"
             android:textSize="18sp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:textColor="#000"/>
 
         <TextView
             android:id="@+id/postTime"
@@ -43,7 +46,8 @@
             android:layout_height="wrap_content"
             android:text="posted..."
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:textColor="#000"/>
 
         </LinearLayout>
 
@@ -53,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="10dp">
+        android:layout_marginTop="10dp">
 
 
         <TextView
@@ -62,15 +66,15 @@
             android:text="Caption"
             android:padding="8dp"
             android:layout_margin="5dp"
-            android:id="@+id/text_title"/>
+            android:id="@+id/text_title"
+            android:textColor="#000"/>
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="320dp"
             android:id="@+id/post_image"
-            android:scaleType="centerCrop"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
+            android:scaleType="centerCrop"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

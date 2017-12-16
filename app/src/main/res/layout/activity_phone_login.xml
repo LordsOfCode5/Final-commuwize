@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="12dp"/>
     <TextView
-        android:background="@color/aqua1"
+        android:background="@color/colorPrimary"
         android:id="@+id/textView2Phone"
         android:padding="10dp"
         android:layout_width="wrap_content"
@@ -62,12 +62,16 @@
         android:layout_toLeftOf="@+id/textView2Phone"
         android:layout_toStartOf="@+id/textView2Phone"
         android:src="@drawable/ic_phone_iphone_black_24dp" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
                 android:background="@color/aqua1"
                 android:id="@+id/textViewVerified"

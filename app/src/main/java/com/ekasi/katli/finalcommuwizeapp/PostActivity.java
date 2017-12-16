@@ -24,7 +24,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class PostActivity extends AppCompatActivity implements View.OnClickListener {
+public class PostActivity extends AppCompatActivity {
 
 
     private ImageView imageview;
@@ -46,13 +46,11 @@ public class PostActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
         imageview = (ImageView)findViewById(R.id.imageVIew);
-        submit = (Button)findViewById(R.id.submit);
         title =(EditText) findViewById(R.id.Title);
 
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = firebaseDatabase.getInstance().getReference().child("CommunityApp");
 
-        submit.setOnClickListener(this);
 
 
     }
@@ -72,6 +70,7 @@ public class PostActivity extends AppCompatActivity implements View.OnClickListe
             try {
                 Bitmap bm = MediaStore.Images.Media.getBitmap(getContentResolver(), imgUri);
                 imageview.setImageBitmap(bm);
+                imageview.setVisibility(View.VISIBLE);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -79,8 +78,7 @@ public class PostActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
-    @Override
-    public void onClick(View v) {
+    public void submitButtonClicked(View view) {
 
         final String titleValue = title.getText().toString().trim();
 
@@ -95,15 +93,10 @@ public class PostActivity extends AppCompatActivity implements View.OnClickListe
                     DatabaseReference newPost = databaseReference.push();
                     newPost.child("title").setValue(titleValue);
                     newPost.child("image").setValue(downloadurl.toString());
+
                 }
-            });
-
-            if (v == submit) {
-
-                Intent intent = new Intent(PostActivity.this, MainActivity.class);
-                startActivity(intent);
-
-            }
+        //The code does not post to the database, Java is getting confused because of we set two onClicks on on button"submit"
+    });
         }
     }
 }

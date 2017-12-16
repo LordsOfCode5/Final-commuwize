@@ -6,8 +6,8 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:icon="@drawable/ic_insert_comment_black_24dp"
+            android:title="Chat" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
@@ -22,8 +22,10 @@
             android:title="Tools" />
     </group>
 
-    <item android:title="Communicate">
+    <group android:checkableBehavior="single">
+
         <menu>
+
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
@@ -32,7 +34,8 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
-        </menu>
-    </item>
 
+        </menu>
+
+    </group>
 </menu>
