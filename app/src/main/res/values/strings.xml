@@ -12,4 +12,5 @@
     <string name="create_account">Create account</string>
     <string name="login">Login</string>
     <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="enter_comment">enter comment</string>
 </resources>

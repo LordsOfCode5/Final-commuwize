@@ -19,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,23 +37,16 @@ public class MainActivity extends AppCompatActivity
 
     private RecyclerView mCommunityList;
     private DatabaseReference mDatabase;
-
-    Toolbar toolbar;
+    private ImageButton comment_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-       fab.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent = new Intent(MainActivity.this, PostActivity.class);
-               startActivity(intent);
-           }
-       });
+        comment_btn = (ImageButton) findViewById(R.id.comment_btn);
+        Intent comment_btn = new Intent (MainActivity.this, CommentActivity.class);
+        startActivity(comment_btn);
 
         mCommunityList = (RecyclerView) findViewById(R.id.community_list);
         mCommunityList.setHasFixedSize(true);
@@ -61,7 +55,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -82,6 +76,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             protected void populateViewHolder(CommunityViewHolder viewHolder, community model, int position) {
 
+                System.out.println(model.getTitle());
                 viewHolder.setTitle(model.getTitle());
                 viewHolder.setImage(getApplicationContext(),(model.getImage()));
 
@@ -92,19 +87,21 @@ public class MainActivity extends AppCompatActivity
     }
 
     public static class CommunityViewHolder extends RecyclerView.ViewHolder {
-
+private View mView;
         public CommunityViewHolder(View itemView) {
             super(itemView);
-            View mView = itemView;
+
+            mView = itemView;
         }
 
         public void setTitle(String title) {
-            TextView post_title = (TextView) itemView.findViewById(R.id.text_title);
+            TextView post_title = (TextView) mView.findViewById(R.id.text_title);
             post_title.setText(title);
         }
         public void setImage(Context ctx, String image){
             ImageView post_image = (ImageView) itemView.findViewById(R.id.post_image);
             Picasso.with(ctx).load(image).into(post_image);
+            post_image.setVisibility(View.VISIBLE);
         }
 
     }
