@@ -9,22 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
+
+           <activity android:name=".AuthActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Splash"/>
-        <activity android:name=".SignUp"/>
-        <activity android:name=".PhoneLogin"/>
-        <activity android:name=".PostActivity"/>
-        <activity android:name=".MyProfile"/>
 
+        <!--
+<activity android:name=".yourActivityName" >
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+        -->
+
+        <activity android:name=".FeedsActivity" />
+        <activity android:name=".PostActivity" />
+        <activity android:name=".MyProfile" />
     </application>
 
 </manifest>

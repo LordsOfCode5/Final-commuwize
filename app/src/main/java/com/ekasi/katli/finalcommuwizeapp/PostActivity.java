@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
 import android.text.TextUtils;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -40,29 +41,28 @@ public class PostActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
-        imageview = (ImageView)findViewById(R.id.imageVIew);
-        title =(EditText) findViewById(R.id.Title);
+        imageview = (ImageView) findViewById(R.id.imageVIew);
+        title = (EditText) findViewById(R.id.Title);
 
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = firebaseDatabase.getInstance().getReference().child("CommunityApp");
 
 
-
     }
-    public void btnBrowse_click(View v){
+
+    public void btnBrowse_click(View v) {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"Select image"), REQUEST_CODE);
+        startActivityForResult(Intent.createChooser(intent, "Select image"), REQUEST_CODE);
     }
 
     @Override
-    protected void onActivityResult(int requestCode,int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
             imgUri = data.getData();
@@ -78,6 +78,7 @@ public class PostActivity extends AppCompatActivity {
             }
         }
     }
+
     public void submitButtonClicked(View view) {
 
         final String titleValue = title.getText().toString().trim();
@@ -92,11 +93,12 @@ public class PostActivity extends AppCompatActivity {
                     Toast.makeText(PostActivity.this, "Upload Complete", Toast.LENGTH_LONG).show();
                     DatabaseReference newPost = databaseReference.push();
                     newPost.child("title").setValue(titleValue);
+
                     newPost.child("image").setValue(downloadurl.toString());
 
                 }
-        //The code does not post to the database, Java is getting confused because of we set two onClicks on on button"submit"
-    });
+                //The code does not post to the database, Java is getting confused because of we set two onClicks on on button"submit"
+            });
         }
     }
 }

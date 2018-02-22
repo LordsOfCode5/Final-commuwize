@@ -23,20 +23,21 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
-            android:src="@drawable/mi_pic"/>
+            android:src="@drawable/social_viber"/>
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
                 android:layout_gravity="center">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lerato Modiba"
-                    android:textSize="20sp"
+                    android:text="Katlego Molokomme"
+                    android:textSize="16sp"
                     android:textAlignment="center"/>
 
                 <TextView
@@ -50,8 +51,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="LeratoModiba@gmail.com"
-                    android:textSize="20sp"
+                    android:text="katlegomolokomme35@gmail.com"
+                    android:textSize="16sp"
                     android:textAlignment="center"/>
 
 
@@ -66,58 +67,29 @@
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
 
-   <!-- <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="14dp"
-        android:layout_marginRight="14dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/collection"
-            android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:src="@color/aqua1"
+                android:scaleType="center"/>
 
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/collection"
-            android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@color/aqua1" />
 
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/collection"
-            android:layout_margin="2dp"/>
-
-
-    </GridLayout>
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="14dp"
-        android:layout_marginRight="14dp">
-
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/collection"
-            android:layout_margin="2dp"/>
-
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/collection"
-            android:layout_margin="2dp"/>
-
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/collection"
-            android:layout_margin="2dp"/>
-
-
-    </GridLayout>-->
+        </LinearLayout>
     </LinearLayout>
+
+
 </ScrollView>
