@@ -5,11 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-<<<<<<< HEAD
     tools:context="com.ekasi.katli.finalcommuwizeapp.FeedsActivity">
-=======
-    tools:context="com.ekasi.katli.finalcommuwizeapp.MainActivity">
->>>>>>> 10559f03e9ddc8ffaef067c207c3e49a51252a20
 
 
     <android.support.v7.widget.RecyclerView

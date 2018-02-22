@@ -74,11 +74,7 @@
             android:layout_height="320dp"
             android:id="@+id/post_image"
             android:scaleType="centerCrop"
-<<<<<<< HEAD
             android:visibility="visible"/>
-=======
-            android:visibility="vi"/>
->>>>>>> 10559f03e9ddc8ffaef067c207c3e49a51252a20
 
     <LinearLayout
         android:layout_width="match_parent"

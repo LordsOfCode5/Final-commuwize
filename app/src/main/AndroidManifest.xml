@@ -10,16 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-<<<<<<< HEAD
-           <activity android:name=".AuthActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme" >
-=======
-        <activity
-            android:name=".MainActivity"
+    <activity
+            android:name=".AuthActivity"
             android:label="CommuWize"
             android:theme="@style/AppTheme">
->>>>>>> 10559f03e9ddc8ffaef067c207c3e49a51252a20
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +21,6 @@
             </intent-filter>
         </activity>
 
-<<<<<<< HEAD
         <!--
 <activity android:name=".yourActivityName" >
     <intent-filter>
@@ -40,19 +33,10 @@
         <activity android:name=".FeedsActivity" />
         <activity android:name=".PostActivity" />
         <activity android:name=".MyProfile" />
-=======
-        <!-- <activity android:name=".MainActivity" -->
-        <!-- android:label="News feed"/> -->
-
-        <activity android:name=".SignUp" />
-        <activity android:name=".PhoneLogin" />
-        <activity android:name=".PostActivity" />
-        <activity android:name=".MyProfile" />
         <activity android:name=".CommentActivity"
             android:label="Comments">
 
         </activity>
->>>>>>> 10559f03e9ddc8ffaef067c207c3e49a51252a20
     </application>
 
 </manifest>
