@@ -40,6 +40,7 @@ public class FeedsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feeds);
 
+<<<<<<< HEAD:app/src/main/java/com/ekasi/katli/finalcommuwizeapp/FeedsActivity.java
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +53,11 @@ public class FeedsActivity extends AppCompatActivity
         comment_btn = (ImageButton) findViewById(R.id.comment_btn);
         Intent comment = new Intent (FeedsActivity.this, PostActivity.class);
         startActivity(comment);
+=======
+        comment_btn = (ImageButton) findViewById(R.id.comment_btn);
+        Intent comment_btn = new Intent (MainActivity.this, CommentActivity.class);
+        startActivity(comment_btn);
+>>>>>>> 10559f03e9ddc8ffaef067c207c3e49a51252a20:app/src/main/java/com/ekasi/katli/finalcommuwizeapp/MainActivity.java
 
         mCommunityList = (RecyclerView) findViewById(R.id.community_list);
         mCommunityList.setHasFixedSize(true);

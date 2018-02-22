@@ -13,6 +13,7 @@
     <string name="login">Login</string>
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="enter_comment">enter comment</string>
+<<<<<<< HEAD
     <string name="desc_firebase_lockup">Firebase logo and name</string>
     <string name="sign_out">Sign Out</string>
     <string name="verify_email">Verify Email</string>
@@ -21,4 +22,6 @@
     <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
     <string name="firebase_status_fmt">Firebase User: %s</string>
     <string name="signed_out">Signed Out</string>
+=======
+>>>>>>> 10559f03e9ddc8ffaef067c207c3e49a51252a20
 </resources>
