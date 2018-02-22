@@ -3,19 +3,15 @@ package com.ekasi.katli.finalcommuwizeapp;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,7 +28,7 @@ import com.squareup.picasso.Picasso;
  * Created by Katlego on 11/12/2017.
  */
 
-public class MainActivity extends AppCompatActivity
+public class FeedsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private RecyclerView mCommunityList;
@@ -42,11 +38,20 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_feeds);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(FeedsActivity.this, PostActivity.class);
+                startActivity(i);
+            }
+        });
 
         comment_btn = (ImageButton) findViewById(R.id.comment_btn);
-        Intent comment_btn = new Intent (MainActivity.this, CommentActivity.class);
-        startActivity(comment_btn);
+        Intent comment = new Intent (FeedsActivity.this, PostActivity.class);
+        startActivity(comment);
 
         mCommunityList = (RecyclerView) findViewById(R.id.community_list);
         mCommunityList.setHasFixedSize(true);
@@ -133,7 +138,7 @@ private View mView;
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(MainActivity.this, MyProfile.class);
+            Intent intent = new Intent(FeedsActivity.this, MyProfile.class);
             startActivity(intent);
 
 
@@ -148,7 +153,7 @@ private View mView;
         }
           else if (id == R.id.nav_profile_picture) {
 
-            Intent intent = new Intent(MainActivity.this, MyProfile.class);
+            Intent intent = new Intent(FeedsActivity.this, MyProfile.class);
             startActivity(intent);
 
         }

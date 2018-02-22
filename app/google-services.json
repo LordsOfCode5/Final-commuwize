@@ -119,6 +119,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "633469775184-lo83g5mbg5vhsr3uo0t1vumkaar8j2vf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ekasi.katli.finalcommuwizeapp",
+            "certificate_hash": "324a9abfb6c656e987977ba58974177af383cfe4"
+          }
+        },
+        {
           "client_id": "633469775184-7l5l1ql0196lch2p3pcmprc7uej4d103.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
