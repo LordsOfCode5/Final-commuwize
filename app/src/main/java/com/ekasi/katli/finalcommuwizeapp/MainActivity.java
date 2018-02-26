@@ -28,7 +28,7 @@ import com.squareup.picasso.Picasso;
  * Created by Katlego on 11/12/2017.
  */
 
-public class FeedsActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private RecyclerView mCommunityList;
@@ -38,19 +38,19 @@ public class FeedsActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feeds);
+        setContentView(R.layout.activity_main);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(FeedsActivity.this, PostActivity.class);
+                Intent i = new Intent(MainActivity.this, PostActivity.class);
                 startActivity(i);
             }
         });
 
         comment_btn = (ImageButton) findViewById(R.id.comment_btn);
-        Intent comment = new Intent (FeedsActivity.this, PostActivity.class);
+        Intent comment = new Intent (MainActivity.this, PostActivity.class);
         startActivity(comment);
 
         mCommunityList = (RecyclerView) findViewById(R.id.community_list);
@@ -138,7 +138,7 @@ private View mView;
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(FeedsActivity.this, MyProfile.class);
+            Intent intent = new Intent(MainActivity.this, MyProfile.class);
             startActivity(intent);
 
 
@@ -153,7 +153,7 @@ private View mView;
         }
           else if (id == R.id.nav_profile_picture) {
 
-            Intent intent = new Intent(FeedsActivity.this, MyProfile.class);
+            Intent intent = new Intent(MainActivity.this, MyProfile.class);
             startActivity(intent);
 
         }

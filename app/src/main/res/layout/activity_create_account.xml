@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ekasi.katli.finalcommuwizeapp.CreateAccountActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30px"
+            android:gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:onClick="btnBrowse_click"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:src="@drawable/social_viber"/>
+
+            <EditText
+                android:id="@+id/name_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:maxEms="25"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/surname_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Surname"
+                android:maxEms="25"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/phone_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="12"
+                android:hint="Phone"
+                android:inputType="phone"/>
+
+            <EditText
+                android:id="@+id/desc_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Short description"
+                android:inputType="text"/>
+
+            <Button
+                android:id="@+id/fab_submit_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="submit"/>
+
+        </LinearLayout>
+
+</LinearLayout>

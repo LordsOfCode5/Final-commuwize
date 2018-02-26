@@ -11,8 +11,12 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".AuthActivity"
+<<<<<<< HEAD
             android:label="CommuWize"
             android:theme="@style/AppTheme">
+=======
+            android:label="CommuWize">
+>>>>>>> c9c21d7319adee6db66a27e7d9f0dba986b7208d
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,12 +33,16 @@
 </activity>
         -->
 
-        <activity android:name=".FeedsActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".PostActivity" />
         <activity android:name=".MyProfile" />
         <activity
             android:name=".CommentActivity"
             android:label="Comments"></activity>
+<<<<<<< HEAD
+=======
+        <activity android:name=".CreateAccountActivity"></activity>
+>>>>>>> c9c21d7319adee6db66a27e7d9f0dba986b7208d
     </application>
 
 </manifest>
