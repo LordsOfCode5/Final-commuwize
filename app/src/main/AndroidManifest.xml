@@ -9,16 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-<<<<<<< HEAD
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-=======
-    <activity
             android:name=".AuthActivity"
             android:label="CommuWize"
->>>>>>> ae9227a838636cf1109e9748bc699c550c1eec5d
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,10 +32,9 @@
         <activity android:name=".FeedsActivity" />
         <activity android:name=".PostActivity" />
         <activity android:name=".MyProfile" />
-        <activity android:name=".CommentActivity"
-            android:label="Comments">
-
-        </activity>
+        <activity
+            android:name=".CommentActivity"
+            android:label="Comments"></activity>
     </application>
 
 </manifest>
